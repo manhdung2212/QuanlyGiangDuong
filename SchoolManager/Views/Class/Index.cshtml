@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class=" container">
+    <h1> Quản lý lớp học </h1>
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <input type="text" name="searchname" value="" placeholder="Nhập từ khóa..." class="form-control" />
+        </div>
+    </div>
+    
+    <hr />
+    <div class="list-class">
+
+    </div>
+    <hr />
+    <div class="form-add-edit">
+        @Html.Action("FormCreateEdit", "Class")
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/Class.js"></script>
+    }
