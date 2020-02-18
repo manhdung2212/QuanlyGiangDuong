@@ -20,7 +20,7 @@ namespace SchoolManager.Controllers
         {
             
 
-            var data = db.Building.OrderBy(x=>x.Name);
+            var data = db.Buildings.OrderBy(x=>x.Name);
             if (search.Trim() != "")
             {
                 data = data.Where(x => x.Name.Contains(search)).OrderBy(x=>x.Name);
@@ -49,7 +49,7 @@ namespace SchoolManager.Controllers
        
         public PartialViewResult InfoDetail(int id)
         {
-            Building cl = db.Building.Find(id);
+            Building cl = db.Buildings.Find(id);
             return PartialView(cl);
         }
 
@@ -63,14 +63,14 @@ namespace SchoolManager.Controllers
             cl.Status = status;  
             cl.CreateDate = DateTime.Now;
             
-            db.Building.Add(cl);
+            db.Buildings.Add(cl);
             db.SaveChanges();
             return Json(true);
         }
         [HttpPost]
         public JsonResult Update(int id, string node, string name , int status )
         {
-            var cl = db.Building.Find(id);
+            var cl = db.Buildings.Find(id);
             cl.Node = node;
             cl.Name = name;
             cl.Status = status; 
@@ -81,8 +81,8 @@ namespace SchoolManager.Controllers
         [HttpPost]
         public JsonResult Delete(int id)
         {
-            var cl = db.Building.Find(id);
-            db.Building.Remove(cl); 
+            var cl = db.Buildings.Find(id);
+            db.Buildings.Remove(cl); 
             db.SaveChanges();
             return Json(true);
         }

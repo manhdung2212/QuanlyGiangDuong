@@ -14,7 +14,7 @@
         <div class="col-md-3">
             <label>Mã môn học</label>
             <select id="subjectid" class="form-control" value="1">
-                @foreach (var item in (ViewBag.listSubject as IEnumerable<SchoolManager.Models.Subjects>))
+                @foreach (var item in (ViewBag.listSubject as IEnumerable<SchoolManager.Models.Subject>))
                 {
                     <option value="@item.ID">@item.Name</option>
                 }
