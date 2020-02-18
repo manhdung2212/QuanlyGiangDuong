@@ -20,9 +20,6 @@ namespace SchoolManager.Controllers
         [HttpPost]
         public PartialViewResult ListClass(int pageNumber, int pageSize, string search,int subjectID,string searchCode)
         {
-
-
-         
             var data=from s in db.Classes
                       join c in db.Subjects on s.SubjectID equals c.ID
                       join z in db.Lecturers on s.LecturerID equals z.ID
