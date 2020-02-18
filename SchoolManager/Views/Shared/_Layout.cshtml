@@ -19,6 +19,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<<<<<<< HEAD
     @{ 
         var userName = Session["userName"];
         if( userName == null)
@@ -26,6 +27,15 @@
         <script>
             location.href = "/UserApp/Login";  
         </script>
+=======
+    @{
+        var userName = Session["userName"];
+        if (userName == null)
+        {
+            <script>
+                location.href = "/UserApp/Login";
+            </script>
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
         }
     }
     <div class="wrapper">
@@ -211,7 +221,11 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+<<<<<<< HEAD
                                     <a href="./index3.html" class="nav-link">
+=======
+                                    <a href="/FacultyManager/Index" class="nav-link">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
                                         <i class="far fa-circle nav-icon"></i>
                                         <p> Khoa </p>
                                     </a>
@@ -420,6 +434,10 @@
     <!-- PAGE SCRIPTS -->
     <script src="~/Content/dist/js/pages/dashboard2.js"></script>
     <script src="~/Scripts/AddOrEdit.js"></script>
+<<<<<<< HEAD
+=======
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -13,8 +13,15 @@ namespace SchoolManager.Controllers
         // GET: Subject
         public ActionResult Index()
         {
+<<<<<<< HEAD
             return View();
         }
+=======
+
+            return View();
+        }
+        [HttpPost]
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
         public PartialViewResult Listsubject(int pageNumber , int pageSize,string search)
         {
             var data = db.Subjects.OrderBy(x => x.Name);
@@ -48,7 +55,11 @@ namespace SchoolManager.Controllers
         [HttpPost]
         public JsonResult Create(string Name,string Node,int Status)
         {
+<<<<<<< HEAD
             var sb = new Subjects();
+=======
+            var sb = new Subject();
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             sb.Name = Name;
             sb.Node = Node;
             sb.CreateDate = DateTime.Now;

@@ -176,8 +176,13 @@
           <Property Name="Description" Type="nvarchar" MaxLength="2000" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
+<<<<<<< HEAD
           <Property Name="CreateBy" Type="nvarchar" MaxLength="200" />
           <Property Name="UpdateBy" Type="nvarchar" MaxLength="200" />
+=======
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="2000" />
+          <Property Name="UpdateBy" Type="nvarchar" MaxLength="2000" />
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
           <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="UserManager">
@@ -283,7 +288,11 @@
           <Property Name="UpdateBy" Type="Int32" />
           <Property Name="Status" Type="Int32" />
         </EntityType>
+<<<<<<< HEAD
         <EntityType Name="Resources">
+=======
+        <EntityType Name="Resource">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -331,7 +340,11 @@
           <Property Name="UpdateBy" Type="Int32" />
           <Property Name="Status" Type="Int32" />
         </EntityType>
+<<<<<<< HEAD
         <EntityType Name="Subjects">
+=======
+        <EntityType Name="Subject">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -379,8 +392,13 @@
           <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+<<<<<<< HEAD
           <Property Name="CreateBy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="UpdateBy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="CreateBy" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateBy" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
           <Property Name="Status" Type="Int32" />
         </EntityType>
         <EntityType Name="UserManager">
@@ -393,6 +411,7 @@
           <Property Name="DateLogin" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityContainer Name="SchoolManagementEntities" annotation:LazyLoadingEnabled="true">
+<<<<<<< HEAD
           <EntitySet Name="Building" EntityType="Self.Building" />
           <EntitySet Name="Class" EntityType="Self.Class" />
           <EntitySet Name="Classroom" EntityType="Self.Classroom" />
@@ -405,6 +424,20 @@
           <EntitySet Name="TimeManagement" EntityType="Self.TimeManagement" />
           <EntitySet Name="UserApp" EntityType="Self.UserApp" />
           <EntitySet Name="UserManager" EntityType="Self.UserManager" />
+=======
+          <EntitySet Name="Buildings" EntityType="Self.Building" />
+          <EntitySet Name="Classes" EntityType="Self.Class" />
+          <EntitySet Name="Classrooms" EntityType="Self.Classroom" />
+          <EntitySet Name="Faculties" EntityType="Self.Faculty" />
+          <EntitySet Name="Lecturers" EntityType="Self.Lecturer" />
+          <EntitySet Name="Resources" EntityType="Self.Resource" />
+          <EntitySet Name="ResourcesManagements" EntityType="Self.ResourcesManagement" />
+          <EntitySet Name="RoomManagements" EntityType="Self.RoomManagement" />
+          <EntitySet Name="Subjects" EntityType="Self.Subject" />
+          <EntitySet Name="TimeManagements" EntityType="Self.TimeManagement" />
+          <EntitySet Name="UserApps" EntityType="Self.UserApp" />
+          <EntitySet Name="UserManagers" EntityType="Self.UserManager" />
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -412,7 +445,11 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="SchoolManagementModelStoreContainer" CdmEntityContainer="SchoolManagementEntities">
+<<<<<<< HEAD
           <EntitySetMapping Name="Building">
+=======
+          <EntitySetMapping Name="Buildings">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.Building">
               <MappingFragment StoreEntitySet="Building">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -426,7 +463,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="Class">
+=======
+          <EntitySetMapping Name="Classes">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.Class">
               <MappingFragment StoreEntitySet="Class">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -443,7 +484,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="Classroom">
+=======
+          <EntitySetMapping Name="Classrooms">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.Classroom">
               <MappingFragment StoreEntitySet="Classroom">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -458,7 +503,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="Faculty">
+=======
+          <EntitySetMapping Name="Faculties">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.Faculty">
               <MappingFragment StoreEntitySet="Faculty">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -472,7 +521,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="Lecturer">
+=======
+          <EntitySetMapping Name="Lecturers">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.Lecturer">
               <MappingFragment StoreEntitySet="Lecturer">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -493,7 +546,11 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Resources">
+<<<<<<< HEAD
             <EntityTypeMapping TypeName="SchoolManagementModel.Resources">
+=======
+            <EntityTypeMapping TypeName="SchoolManagementModel.Resource">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
               <MappingFragment StoreEntitySet="Resources">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -509,7 +566,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="ResourcesManagement">
+=======
+          <EntitySetMapping Name="ResourcesManagements">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.ResourcesManagement">
               <MappingFragment StoreEntitySet="ResourcesManagement">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -526,7 +587,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="RoomManagement">
+=======
+          <EntitySetMapping Name="RoomManagements">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.RoomManagement">
               <MappingFragment StoreEntitySet="RoomManagement">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -544,7 +609,11 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Subjects">
+<<<<<<< HEAD
             <EntityTypeMapping TypeName="SchoolManagementModel.Subjects">
+=======
+            <EntityTypeMapping TypeName="SchoolManagementModel.Subject">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
               <MappingFragment StoreEntitySet="Subjects">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -557,7 +626,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="TimeManagement">
+=======
+          <EntitySetMapping Name="TimeManagements">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.TimeManagement">
               <MappingFragment StoreEntitySet="TimeManagement">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -578,7 +651,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="UserApp">
+=======
+          <EntitySetMapping Name="UserApps">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.UserApp">
               <MappingFragment StoreEntitySet="UserApp">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -598,7 +675,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="UserManager">
+=======
+          <EntitySetMapping Name="UserManagers">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             <EntityTypeMapping TypeName="SchoolManagementModel.UserManager">
               <MappingFragment StoreEntitySet="UserManager">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -622,7 +703,11 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
+<<<<<<< HEAD
         <DesignerProperty Name="EnablePluralization" Value="false" />
+=======
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿// T4 code generation is enabled for model 'G:\ShoolManager\SchoolManager\SchoolManager\Models\SchoolManager.edmx'. 
+=======
+﻿// T4 code generation is enabled for model 'C:\Users\ADMIN\Desktop\QuanLyGiangDuong\QuanlyGiangDuong\SchoolManager\Models\SchoolManager.edmx'. 
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

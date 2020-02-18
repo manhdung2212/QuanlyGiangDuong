@@ -2,6 +2,11 @@
 var pageNumber = 1;
 var pageSize = 5;
 var search = "";
+<<<<<<< HEAD
+=======
+var subjectid = 0;
+var searchcode = "";
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
 function EditClick() {
     $('.btn-edit').click(function () {
         id = $(this).attr('data-id');
@@ -52,6 +57,11 @@ function GetListClass() {
             pageNumber: pageNumber,
             pageSize: pageSize,
             search: search,
+<<<<<<< HEAD
+=======
+            subjectID: subjectid,
+            searchCode:searchcode,
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
         },
         beforeSend: function () {
 
@@ -95,11 +105,25 @@ function AddClass() {
                 beforeSend: function () { },
                 success: function (res) {
 
+<<<<<<< HEAD
                     if (res) {
                         GetListClass();
                         DefaultValueInput();
 
                     }
+=======
+                    Swal.fire({
+
+                        icon: 'success',
+                        title: 'Thêm thành công!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                        GetListClass();
+                        DefaultValueInput();
+
+                    
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
 
                 },
                 error: function () { },
@@ -143,11 +167,25 @@ function Update() {
             },
             beforeSend: function () { },
             success: function (res) {
+<<<<<<< HEAD
 
                 if (res) {
                     GetListClass();
                     DefaultValueInput();
                 }
+=======
+                Swal.fire({
+
+                    icon: 'success',
+                    title: 'Cập nhật thành công!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                
+                    GetListClass();
+                    DefaultValueInput();
+                
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             },
             error: function () { },
             complete: function () { },
@@ -160,6 +198,7 @@ Update();
 function DeleteClass() {
     $('.btn-delete').click(function () {
         id = $(this).attr('data-id');
+<<<<<<< HEAD
         $.ajax({
             url: "/Class/Delete",
             type: "POST",
@@ -187,6 +226,50 @@ function DeleteClass() {
         )
     })
 }
+=======
+        Swal.fire({
+            title: 'Bạn có muốn xóa không?',
+            text: "Dữ liệu sẽ bị mất!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Xóa!'
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: "/Class/Delete",
+                    type: "POST",
+                    dataType: "json",
+
+                    data: {
+                        id: id
+                    },
+
+                    beforeSend: function () {
+
+                    },
+                    success: function (res) {
+
+                        Swal.fire({
+
+                            icon: 'success',
+                            title: 'Xóa thành công!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                        GetListClass();
+
+                    },
+                    error: function () { },
+                    complete: function () { },
+
+                })
+            }
+        })
+        })
+ }
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
 DeleteClass();
 function Pagination() {
     $('.pagination button').click(function () {
@@ -202,6 +285,16 @@ function Search() {
         GetListClass();
     })
 }
+<<<<<<< HEAD
+=======
+function SearchCode() {
+    $('input[name="searchcode"]').keyup(function () {
+        searchcode = $(this).val();
+        GetListClass();
+    })
+}
+SearchCode();
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
 function Check(code, name, node, subjectid, lecturerid) {
     if (code.trim() == '' || name.trim() == '' || subjectid.trim() == '' || lecturerid.trim() == '' || node.trim() == '') {
         $('.error').html('');
@@ -217,9 +310,16 @@ function Check(code, name, node, subjectid, lecturerid) {
     }
     return true;
 }
+<<<<<<< HEAD
 
 function Back() {
     $('.btn-back').click(function(){
+=======
+FillterBySubject();
+function FillterBySubject() {
+    $('.subjectID').change(function () {
+        subjectid = $(this).val();
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
         GetListClass();
     })
 }

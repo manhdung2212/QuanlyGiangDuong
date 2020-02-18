@@ -20,7 +20,11 @@ namespace SchoolManager.Controllers
         {
             
 
+<<<<<<< HEAD
             var data = db.Building.OrderBy(x=>x.Name);
+=======
+            var data = db.Buildings.OrderBy(x=>x.Name);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             if (search.Trim() != "")
             {
                 data = data.Where(x => x.Name.Contains(search)).OrderBy(x=>x.Name);
@@ -49,7 +53,11 @@ namespace SchoolManager.Controllers
        
         public PartialViewResult InfoDetail(int id)
         {
+<<<<<<< HEAD
             Building cl = db.Building.Find(id);
+=======
+            Building cl = db.Buildings.Find(id);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             return PartialView(cl);
         }
 
@@ -63,14 +71,22 @@ namespace SchoolManager.Controllers
             cl.Status = status;  
             cl.CreateDate = DateTime.Now;
             
+<<<<<<< HEAD
             db.Building.Add(cl);
+=======
+            db.Buildings.Add(cl);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             db.SaveChanges();
             return Json(true);
         }
         [HttpPost]
         public JsonResult Update(int id, string node, string name , int status )
         {
+<<<<<<< HEAD
             var cl = db.Building.Find(id);
+=======
+            var cl = db.Buildings.Find(id);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             cl.Node = node;
             cl.Name = name;
             cl.Status = status; 
@@ -81,8 +97,13 @@ namespace SchoolManager.Controllers
         [HttpPost]
         public JsonResult Delete(int id)
         {
+<<<<<<< HEAD
             var cl = db.Building.Find(id);
             db.Building.Remove(cl); 
+=======
+            var cl = db.Buildings.Find(id);
+            db.Buildings.Remove(cl); 
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             db.SaveChanges();
             return Json(true);
         }

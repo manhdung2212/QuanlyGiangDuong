@@ -22,6 +22,7 @@ namespace SchoolManager.Controllers
         [HttpPost]
         public JsonResult Login( string account , string password)
         {
+<<<<<<< HEAD
             var user = db.UserManager.Where(x => x.Account == account && x.Password == password).FirstOrDefault();  
             if( user != null)
             {
@@ -30,6 +31,16 @@ namespace SchoolManager.Controllers
                 {
                     userApp = new UserApp { Name = "admin" };
                     db.UserApp.Add(userApp);
+=======
+            var user = db.UserManagers.Where(x => x.Account == account && x.Password == password).FirstOrDefault();  
+            if( user != null)
+            {
+                var userApp = db.UserApps.Find(user.ID);  
+                if( userApp == null)
+                {
+                    userApp = new UserApp { Name = "admin" };
+                    db.UserApps.Add(userApp);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
                     db.SaveChanges();
                    
                 }
@@ -43,8 +54,13 @@ namespace SchoolManager.Controllers
 
         public PartialViewResult ListUser( int pageNumber , int pageSize  ,  string search)
         {
+<<<<<<< HEAD
             var data = from u in db.UserManager
                        join userApp in db.UserApp on u.ID equals userApp.ID
+=======
+            var data = from u in db.UserManagers
+                       join userApp in db.UserApps on u.ID equals userApp.ID
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
                        select new UserViewModel
                        {
                            ID = u.ID,
@@ -75,8 +91,13 @@ namespace SchoolManager.Controllers
             {
                 UserManager user = new UserManager { Account = account , Password = password, DateLogin = DateTime.Now };
                 UserApp userApp = new UserApp { Name = name , CreateBy  = userName.ToString() , UpdateBy = userName.ToString() , CreateDate = DateTime.Now , UpdateDate = DateTime.Now , Status = 0  };
+<<<<<<< HEAD
                 db.UserApp.Add(userApp); 
                 db.UserManager.Add(user);
+=======
+                db.UserApps.Add(userApp); 
+                db.UserManagers.Add(user);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
                 db.SaveChanges();
                 return Json(true , JsonRequestBehavior.AllowGet);
             }

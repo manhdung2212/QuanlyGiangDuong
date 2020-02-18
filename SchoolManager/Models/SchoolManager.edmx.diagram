@@ -4,16 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="3bc14894d4a04a1491487f4d24b29529" Name="Diagram1">
+=======
+      <Diagram DiagramId="18c534268d6a48a0a83ade2f40c4487d" Name="Diagram1">
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
         <EntityTypeShape EntityType="SchoolManagementModel.Building" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SchoolManagementModel.Class" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SchoolManagementModel.Classroom" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SchoolManagementModel.Faculty" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SchoolManagementModel.Lecturer" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+<<<<<<< HEAD
         <EntityTypeShape EntityType="SchoolManagementModel.Resources" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SchoolManagementModel.ResourcesManagement" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SchoolManagementModel.RoomManagement" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SchoolManagementModel.Subjects" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+=======
+        <EntityTypeShape EntityType="SchoolManagementModel.Resource" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementModel.ResourcesManagement" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementModel.RoomManagement" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementModel.Subject" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
         <EntityTypeShape EntityType="SchoolManagementModel.TimeManagement" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SchoolManagementModel.UserApp" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SchoolManagementModel.UserManager" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />

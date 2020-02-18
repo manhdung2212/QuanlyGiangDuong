@@ -14,7 +14,11 @@
     function GetListSubject() {
         $.ajax({
             url: "/Subject/Listsubject",
+<<<<<<< HEAD
             type: "Get",
+=======
+            type: "POST",
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             dataType: "html",
             data: {
                 pageSize: pageSize,

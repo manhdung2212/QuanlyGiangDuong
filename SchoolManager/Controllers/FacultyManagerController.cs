@@ -18,7 +18,11 @@ namespace SchoolManager.Controllers
         public PartialViewResult ListFaculty(int pageNumber, int pagesize, string search)
         {
             
+<<<<<<< HEAD
             var data = db.Faculty.OrderBy(x => x.Name);
+=======
+            var data = db.Faculties.OrderBy(x => x.Name);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
            
 
             if (search.Trim() != "")
@@ -44,7 +48,11 @@ namespace SchoolManager.Controllers
         {
             Faculty Fa = new Faculty { Name = Name, Node = Node, CreateDate = DateTime.Now, UpdateDate = DateTime.Now, Status = Status };
             
+<<<<<<< HEAD
             db.Faculty.Add(Fa);
+=======
+            db.Faculties.Add(Fa);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             db.SaveChanges();
             return Json(true);
         }
@@ -52,7 +60,11 @@ namespace SchoolManager.Controllers
         public JsonResult Update(int ID, string Name, string Node,int Status)
         {
 
+<<<<<<< HEAD
             var model = db.Faculty.Find(ID);
+=======
+            var model = db.Faculties.Find(ID);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             model.Name = Name;
             model.Node = Node;
             
@@ -65,15 +77,24 @@ namespace SchoolManager.Controllers
         [HttpPost]
         public JsonResult Delete(int ID)
         {
+<<<<<<< HEAD
             var model = db.Faculty.Find(ID);
             db.Faculty.Remove(model);
+=======
+            var model = db.Faculties.Find(ID);
+            db.Faculties.Remove(model);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
             db.SaveChanges();
             return Json(true);
         }
     
         public PartialViewResult ChitietKhoa(int ID)
         {
+<<<<<<< HEAD
             Faculty data = db.Faculty.Find(ID);
+=======
+            Faculty data = db.Faculties.Find(ID);
+>>>>>>> 3eb0c03e64b88b477fc655f737684f75edd0f451
 
             return PartialView(data);
         }
