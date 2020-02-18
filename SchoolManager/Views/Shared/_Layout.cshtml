@@ -19,13 +19,13 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-    @{ 
+    @{
         var userName = Session["userName"];
-        if( userName == null)
+        if (userName == null)
         {
-        <script>
-            location.href = "/UserApp/Login";  
-        </script>
+            <script>
+                location.href = "/UserApp/Login";
+            </script>
         }
     }
     <div class="wrapper">
@@ -420,6 +420,7 @@
     <!-- PAGE SCRIPTS -->
     <script src="~/Content/dist/js/pages/dashboard2.js"></script>
     <script src="~/Scripts/AddOrEdit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
